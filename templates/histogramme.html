@@ -12,15 +12,11 @@
      function drawBackgroundColor() {
     function drawChart(data) {
     // Convertir les données récupérées en un tableau utilisable par Google Charts
-    var dataTable = google.visualization.arrayToDataTable([
-          ['Dinosaur', 'Length'],
-          ['Acrocanthosaurus (top-spined lizard)', 12.2],
-          ['Albertosaurus (Alberta lizard)', 9.1],
-          ['Allosaurus (other lizard)', 12.2],
-          ['Apatosaurus (deceptive lizard)', 22.9],
-          ['Archaeopteryx (ancient wing)', 0.9],
-          ['Argentinosaurus (Argentina lizard)', 36.6],
-    ]);
+    var dataTable = google.visualization.DataTable();
+    dataTable.addColumn('Jour', 'Température');
+    dataTable.addColumn('07.01.2024', '25');
+
+
 
     // Configurer les options du graphique en ligne
     var options = {
