@@ -24,7 +24,8 @@ def mongraphique():
 
 # Creation d'un histogramme disponible depuis la page /histogramme
 @app.route("/histogramme/")
-def mongraphique():
+# On definit la constante histogramme
+def histogramme():
     return render_template("histogramme.html")
 
 # Récupération des données de openweather map, récupération des valeurs de DT, conversion de kelvin en °C. On donne ensuite 2 données : Jour & temperature
