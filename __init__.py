@@ -11,10 +11,18 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
+# Ajout page contact
+
 @app.route("/contact/")
 def MaPremiereAPI():
     return "<h2>Ma page de contact</h2>"
 
+# Ajout rapport avec templates dans la page /templates et accessible depuis /rapport
+@app.route("/rapport/")
+def mongraphique():
+    return render_template("graphique.html")
+
+# Récupération des données de openweather map, récupération des valeurs de DT, conversion de kelvin en °C. On donne ensuite 2 données : Jour & temperature
 @app.route('/tawarano/')
 def meteo():
     response = urlopen('https://samples.openweathermap.org/data/2.5/forecast?lat=0&lon=0&appid=xxx')
