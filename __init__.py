@@ -15,7 +15,7 @@ def hello_world():
 
 @app.route("/contact/")
 def MaPremiereAPI():
-    return "<h2>Ma page de contact</h2>"
+    return render_template('page_contact.html')
 
 # Ajout rapport avec templates dans la page /templates et accessible depuis /rapport
 @app.route("/rapport/")
