@@ -16,7 +16,7 @@
               ['Jour', 'Température'],
                 data.results.forEach(entry => {
                 var date = new Date(entry.Jour * 1000);
-                dataTable.addRow([date.toLocaleDateString(), entry.temp]);
+                dataTable.addRow([date.toLocaleDateString()], [entry.temp],);
               }
         ]);
 
