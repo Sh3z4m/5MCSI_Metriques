@@ -16,7 +16,7 @@
               ['Jour', 'Température'],
                 data.results.forEach(entry => {
                 var date = new Date(entry.Jour * 1000);
-                dataTable.push('date.toLocaleDateString()', 'entry.temp');
+                dataTable.push([date.toLocaleDateString(), entry.temp]);
               }
         ]);
 
@@ -27,6 +27,8 @@
       title: 'Évolution des températures de la ville de Tawarano',
       legend: { position: 'none' },
       colors: ['orange'],
+      hAxis: { title: "Jour" },
+      vAxis: { title: "Température (°C)" },
     };
     var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
     chart.draw(dataTable, options);
